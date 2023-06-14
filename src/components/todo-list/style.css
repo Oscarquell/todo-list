@@ -18,6 +18,10 @@
     color: white;
 }
 
+.done-todo {
+    text-decoration: line-through;
+}
+
 .todo-list-buttons {
     display: block;
     width: 38px;
@@ -52,4 +56,8 @@
 
 .copy {
     background: url("../../../src/img/copy-logo.png") center center/cover no-repeat;
+}
+
+.done {
+    background: url("../../../src/img/done-logo.png") center center/cover no-repeat;
 }

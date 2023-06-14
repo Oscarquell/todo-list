@@ -1,6 +1,7 @@
 const ADD_TASK = 'ADD_TASK'
 const DELETE_TASK = 'DELETE_TASK'
 const COPY_TASK = 'COPY_TASK'
+const EDIT_TASK = 'EDIT_TASK'
 
 const initialState = {
     todos: [],
@@ -14,9 +15,6 @@ export default (state = initialState, action) => {
                 ...state,
                 todos: [...state.todos, {
                     title: action.payload,
-                    isDelete: false,
-                    isImportant: false,
-                    isDone: false,
                     id: Math.floor(Math.random() * 100000)
                 }],
                 count: state.count + 1
@@ -32,13 +30,18 @@ export default (state = initialState, action) => {
                 ...state,
                 todos: [...state.todos, {
                     title: action.payload,
-                    isDelete: false,
-                    isImportant: false,
-                    isDone: false,
                     id: Math.floor(Math.random() * 100000)
                 }],
                 count: state.count + 1
             }
+        } case EDIT_TASK: {
+            const { id, newTitle } = action.payload;
+            return {
+                ...state,
+                todos: state.todos.map((item) =>
+                    item.id === id ?  item : { ...item, title: newTitle, id: Math.floor(Math.random() * 100000)}
+                )
+            };
         }
         default: return state
     }
@@ -62,4 +65,9 @@ export const copyTask = (title) => {
     }
 }
 
+export const editTask = (id, newTitle) => {
+    return (dispatch) => {
+        return dispatch({type: EDIT_TASK, payload: { id, newTitle }})
+    }
+}
 
