@@ -4,28 +4,52 @@
     justify-content: center;
     width: 822px;
     height: 38px;
-    margin: 0 auto;
+    margin: 0 auto 25px;
+
 }
 
 .todo-list-item {
     display: block;
     width: 784px;
-    height: 38px;
+    height: 32px;
     background: #222222;
     border-radius: 10px;
+    font-size: 20px;
+    color: white;
 }
 
-.todo-list-delete-icon {
+.todo-list-buttons {
     display: block;
     width: 38px;
     height: 38px;
     background: #999999;
     border-radius: 10px;
+    margin-left: 7px;
+    transition-duration: 0.2s;
 }
 
-.delete-icon {
+.todo-list-buttons:hover {
+    background: #FFFFFF;
+}
+
+.todo-list-buttons:active {
+    background: gray;
+}
+
+.icon-btn {
     display: block;
-    background: url("../../../src/img/delete-logo.png") center center/cover no-repeat;
     width: 38px;
     height: 38px;
+}
+
+.delete {
+    background: url("../../../src/img/delete-logo.png") center center/cover no-repeat;
+}
+
+.edit {
+    background: url("../../../src/img/edit-logo-2.png") center center/cover no-repeat;
+}
+
+.copy {
+    background: url("../../../src/img/copy-logo.png") center center/cover no-repeat;
 }
