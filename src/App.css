@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
+
 .App {
   width: 100%;
   height: 100vh;
@@ -9,6 +11,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 53px;
+}
+
+.underline-with-edit-icon {
+  padding: 30px 0 75px 0;
 }
 
 .head-line {
@@ -26,6 +33,7 @@
   line-height: 81px;
   text-transform: uppercase;
   white-space: nowrap;
+  font-family: 'Racing Sans One';
 }
 
 .head-underline {
@@ -39,4 +47,10 @@
   width: 32px;
   height: 32px;
   background: url("../src/img/edit-logo.png") center center/contain no-repeat;
+}
+
+.long-underline {
+  width: 970px;
+  border: 1px solid #FFFFFF;
+  margin: 35px auto 80px;
 }

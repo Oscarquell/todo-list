@@ -1,0 +1,31 @@
+.todo-list-todos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 822px;
+    height: 38px;
+    margin: 0 auto;
+}
+
+.todo-list-item {
+    display: block;
+    width: 784px;
+    height: 38px;
+    background: #222222;
+    border-radius: 10px;
+}
+
+.todo-list-delete-icon {
+    display: block;
+    width: 38px;
+    height: 38px;
+    background: #999999;
+    border-radius: 10px;
+}
+
+.delete-icon {
+    display: block;
+    background: url("../../../src/img/delete-logo.png") center center/cover no-repeat;
+    width: 38px;
+    height: 38px;
+}
