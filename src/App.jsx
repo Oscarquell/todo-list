@@ -1,8 +1,17 @@
+import {useState} from "react";
 import AddTodoItem from "./components/add-todo";
 import TodoList from "./components/todo-list";
 import './App.css';
 
+
 function App() {
+
+    const [task, setTask] = useState({
+        title: '',
+        id: null
+    })
+    const [changeValue, setChangeValue] = useState(false)
+
   return (
     <div className="App">
         <div className="head-title-wrap">
@@ -15,9 +24,18 @@ function App() {
             <i className='edit-logo' />
             <span className="head-underline" />
         </div>
-        <AddTodoItem />
+        <AddTodoItem
+            task={task}
+            setTask={setTask}
+            changeValue={changeValue}
+            setChangeValue={setChangeValue}
+        />
         <div className="long-underline" />
-        <TodoList />
+        <TodoList
+            task={task}
+            setTask={setTask}
+            setChangeValue={setChangeValue}
+        />
     </div>
   );
 }
