@@ -61,3 +61,7 @@
 .done {
     background: url("../../../src/img/done-logo.png") center center/cover no-repeat;
 }
+
+.important {
+    background: url("../../../src/img/important-logo.png") center center/cover no-repeat;
+}
