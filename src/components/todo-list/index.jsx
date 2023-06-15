@@ -49,6 +49,11 @@ const TodoList = ({task, setTask, setChangeValue}) => {
                         onClick={() => setDone(true)}>
                             <i className='done icon-btn' />
                         </span>
+                    <span
+                      className='todo-list-buttons'
+                      onClick={null}>
+                            <i className='important icon-btn' />
+                        </span>
                 </div>
             ))
 
