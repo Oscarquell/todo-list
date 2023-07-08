@@ -1,1 +1,1 @@
-# in the process of execution
+# TODO List с использованием React Redux. 
